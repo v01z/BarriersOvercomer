@@ -24,7 +24,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere)
-	int32 MyInt = 99;
+	int32 MyInt = 81;
 
 	UPROPERTY(EditAnywhere)
 	int32 InputA{};
@@ -51,4 +51,8 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	bool MyBool = true;
+
+	UPROPERTY(EditAnywhere)
+	bool NextMyBool = true;
+
 };
