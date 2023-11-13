@@ -1,0 +1,868 @@
+{
+	"folders": [
+		{
+			"name": "BarriersOvercomer",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "BarriersOvercomer Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"Debug",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"Debug",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomer Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"Debug",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"DebugGame",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"DebugGame",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomer Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"DebugGame",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"Development",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"Development",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomer Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"Development",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"Test",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"Test",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomer Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"Test",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"Shipping",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"Shipping",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomer Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"Linux",
+					"Shipping",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"Debug",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"Debug",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomer LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"Debug",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomer LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"Development",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"Development",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomer LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"Development",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"Test",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"Test",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomer LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"Test",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"Shipping",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"Shipping",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomer LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomer LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomer",
+					"LinuxArm64",
+					"Shipping",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomerEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomerEditor",
+					"Linux",
+					"Debug",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomerEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomerEditor",
+					"Linux",
+					"Debug",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomerEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomerEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomerEditor",
+					"Linux",
+					"Debug",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomerEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomerEditor",
+					"Linux",
+					"DebugGame",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomerEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomerEditor",
+					"Linux",
+					"DebugGame",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomerEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomerEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomerEditor",
+					"Linux",
+					"DebugGame",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomerEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomerEditor",
+					"Linux",
+					"Development",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomerEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomerEditor",
+					"Linux",
+					"Development",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BarriersOvercomerEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			},
+			{
+				"label": "BarriersOvercomerEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BarriersOvercomerEditor",
+					"Linux",
+					"Development",
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch BarriersOvercomer (Debug)",
+				"request": "launch",
+				"program": "/home/knight/git/ue/BarriersOvercomer/Binaries/Linux/BarriersOvercomer-Linux-Debug",
+				"preLaunchTask": "BarriersOvercomer Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/data2/ue/ue_5_3_2/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch BarriersOvercomer (DebugGame)",
+				"request": "launch",
+				"program": "/home/knight/git/ue/BarriersOvercomer/Binaries/Linux/BarriersOvercomer-Linux-DebugGame",
+				"preLaunchTask": "BarriersOvercomer Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/data2/ue/ue_5_3_2/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch BarriersOvercomer (Development)",
+				"request": "launch",
+				"program": "/home/knight/git/ue/BarriersOvercomer/Binaries/Linux/BarriersOvercomer",
+				"preLaunchTask": "BarriersOvercomer Linux Development Build",
+				"args": [
+				],
+				"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/data2/ue/ue_5_3_2/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch BarriersOvercomer (Test)",
+				"request": "launch",
+				"program": "/home/knight/git/ue/BarriersOvercomer/Binaries/Linux/BarriersOvercomer-Linux-Test",
+				"preLaunchTask": "BarriersOvercomer Linux Test Build",
+				"args": [
+				],
+				"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/data2/ue/ue_5_3_2/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch BarriersOvercomer (Shipping)",
+				"request": "launch",
+				"program": "/home/knight/git/ue/BarriersOvercomer/Binaries/Linux/BarriersOvercomer-Linux-Shipping",
+				"preLaunchTask": "BarriersOvercomer Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/data2/ue/ue_5_3_2/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch BarriersOvercomerEditor (Debug)",
+				"request": "launch",
+				"program": "/mnt/data2/ue/ue_5_3_2/UnrealEngine/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "BarriersOvercomerEditor Linux Debug Build",
+				"args": [
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject"
+				],
+				"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/data2/ue/ue_5_3_2/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch BarriersOvercomerEditor (DebugGame)",
+				"request": "launch",
+				"program": "/mnt/data2/ue/ue_5_3_2/UnrealEngine/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "BarriersOvercomerEditor Linux DebugGame Build",
+				"args": [
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject"
+				],
+				"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/data2/ue/ue_5_3_2/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch BarriersOvercomerEditor (Development)",
+				"request": "launch",
+				"program": "/mnt/data2/ue/ue_5_3_2/UnrealEngine/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "BarriersOvercomerEditor Linux Development Build",
+				"args": [
+					"/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject"
+				],
+				"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/data2/ue/ue_5_3_2/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/mnt/data2/ue/ue_5_3_2/UnrealEngine/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/home/knight/git/ue/BarriersOvercomer/BarriersOvercomer.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/mnt/data2/ue/ue_5_3_2/UnrealEngine"
+			}
+		]
+	}
+}
