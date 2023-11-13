@@ -51,8 +51,4 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	bool MyBool = true;
-
-	UPROPERTY(EditAnywhere)
-	bool NextMyBool = true;
-
 };
