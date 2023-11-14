@@ -24,5 +24,5 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
-	FVector CurrentPositionVecdtor;
+	const FVector StartingLocationVector{-15340, -2190, 4056};
 };
