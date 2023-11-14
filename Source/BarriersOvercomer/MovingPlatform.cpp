@@ -3,7 +3,7 @@
 #include "MovingPlatform.h"
 
 // Sets default values
-AMovingPlatform::AMovingPlatform()
+AMovingPlatform::AMovingPlatform() : CurrentPositionVecdtor{-15340, -2190, 4056}
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -14,19 +14,14 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 
-	MyInt = 8;
-	APlusB = InputA + InputB;
-
-	FloatAPlusFloatB = summFloats(InputFloatA, InputFloatB);
+	SetActorLocation(CurrentPositionVecdtor);
 }
 
 // Called every frame
 void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-}
 
-float AMovingPlatform::summFloats(float a, float b)
-{
-	return a + b;
+	CurrentPositionVecdtor.Y++;
+	SetActorLocation(CurrentPositionVecdtor);
 }
