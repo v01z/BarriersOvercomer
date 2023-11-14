@@ -24,5 +24,11 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
-	const FVector StartingLocationVector{-15340, -2190, 4056};
+	FVector StartingLocationVector;
+
+	UPROPERTY(EditAnywhere, Category = "Moving Platform")
+	FVector PlatformVelocity = FVector(100, 0, 0);
+
+	UPROPERTY(EditAnywhere, Category = "Moving Platform")
+	float MovedDistance = 100;
 };
