@@ -31,4 +31,10 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Moving Platform")
 	float MovedDistance = 100.0f;
+
+	void MovePlatform(float);
+	void RotatePlatform(float);
+
+	bool ShouldPlatformReturn() const;
+	float GetDistanceMoved() const;
 };
